@@ -3,7 +3,8 @@ let count = 0;
 // select value and buttons
 const value = document.querySelector("#value");
 const btns = document.querySelectorAll(".btn");
-
+// for each button when clicked check if the count is decreasing increasing or
+// needs to be reset
 btns.forEach(function (btn) {
   btn.addEventListener("click", function (e) {
     const styles = e.currentTarget.classList;
@@ -14,12 +15,12 @@ btns.forEach(function (btn) {
     } else {
       count = 0;
     }
-
+    // color changes
     if (count > 0) {
-      value.style.color = "green";
+      value.style.color = "#9d8189";
     }
     if (count < 0) {
-      value.style.color = "red";
+      value.style.color = "#6c584c";
     }
     if (count === 0) {
       value.style.color = "#222";
